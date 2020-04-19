@@ -1,13 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import { Text } from 'components/lib'
+import { Text } from "components/lib";
 
-import sponsors from 'assets/sponsors.json'
+import sponsors from "assets/sponsors.json";
 
-const Sponsors = Text.extend`
+const Sponsors = styled(Text)`
   margin: 2em 0;
-`
+`;
 
 // const Sponsor = styled.div`
 //   display: inline-block;
@@ -24,16 +24,18 @@ const Sponsors = Text.extend`
 const Sponsor = styled.strong`
   display: inline-block;
   margin-right: 1.5em;
-  margin-bottom: .5em;
-`
+  margin-bottom: 0.5em;
+`;
 
 export default () => (
   <Sponsors>
-    {sponsors.map(({ name }, i) =>
-      <Sponsor key={i}>{name}</Sponsor>
+    {sponsors.map(
+      ({ name }, i) => (
+        <Sponsor key={i}>{name}</Sponsor>
+      )
       // <Column key={i} size={1} sSize={2}>
       //   <Sponsor {...sponsor} />
       // </Column>
     )}
   </Sponsors>
-)
+);

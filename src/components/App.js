@@ -1,29 +1,27 @@
-import React, { Fragment } from 'react'
-import { Route, Switch } from 'react-router'
+import React from "react";
 
-import Translations from 'components/Translations'
-import Theme from 'components/Theme'
-import { Container } from 'components/lib'
-import SponsorModal from 'components/SponsorModal'
-import PhotoModal from 'components/PhotoModal'
-import HomePage from 'pages/home'
+import Translations from "components/Translations";
+import LocaleTracker from "components/LocaleTracker";
+import Theme from "components/Theme";
+import { Container } from "components/lib";
+import SponsorModal from "components/SponsorModal";
+import PhotoModal from "components/PhotoModal";
+import HomePage from "pages/home";
 
 const App = () => (
   <Translations>
-    <Theme>
-      <Fragment>
+    <LocaleTracker>
+      <Theme>
         <Container>
-          <Switch>
-            <Route path="/" exact component={HomePage} />
-          </Switch>
+          <HomePage />
         </Container>
         <SponsorModal />
-        {[1,2,3,4,5,6].map(n =>
+        {[1, 2, 3, 4, 5, 6].map((n) => (
           <PhotoModal key={n} n={n} />
-        )}
-      </Fragment>
-    </Theme>
+        ))}
+      </Theme>
+    </LocaleTracker>
   </Translations>
-)
+);
 
-export default App
+export default App;

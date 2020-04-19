@@ -1,5 +1,5 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-const InputGroup = styled.div``
+const InputGroup = styled.div``;
 
-export default InputGroup
+export default InputGroup;

@@ -1,12 +1,12 @@
-import { createReducer } from './util'
+import { createReducer } from "./util";
 
-import sponsors from 'assets/sponsors.json'
+import sponsors from "assets/sponsors.json";
 
 // Action types
 
 // Action creators
 
 // Reducers
-export const reducer = createReducer(sponsors, {})
+export const reducer = createReducer(sponsors, {});
 
-export default reducer
+export default reducer;

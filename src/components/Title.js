@@ -1,7 +1,8 @@
-import { media } from 'style-utils'
-import { Title } from 'components/lib'
+import styled from "styled-components";
+import { media } from "style-utils";
+import { Title } from "components/lib";
 
-export default Title(1).extend`
+export default styled(Title(1))`
   margin-bottom: 0;
 
   font-size: 4em;
@@ -9,6 +10,6 @@ export default Title(1).extend`
   font-weight: 900;
 
   strong {
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
   }
-`
+`;
