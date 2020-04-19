@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { media } from "style-utils";
 import { withTranslation, Trans } from "react-i18next";
 
 import { Text, Link, Wrapper, Row, Column } from "components/lib";
@@ -16,6 +17,13 @@ const Page = styled.div`
   background-color: ${(props) => props.theme.colors.background};
 `;
 
+const StickyColumn = styled(Column)`
+  position: sticky;
+  top: 0;
+
+  ${media.small`position: static;`}
+`;
+
 const HomePage = ({ t }) => (
   <Page currentModal={null}>
     <Header />
@@ -30,10 +38,10 @@ const HomePage = ({ t }) => (
           </Title>
           <Text>{t("page:intro")}</Text>
         </Column>
-        <Column size={4} sSize={12}>
+        <StickyColumn size={4} sSize={12}>
           <SponsorForm />
           <ShareForm />
-        </Column>
+        </StickyColumn>
         <Column size={8} sSize={12}>
           <Photos />
         </Column>
